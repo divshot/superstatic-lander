@@ -1,0 +1,94 @@
+*
+  box-sizing: border-box
+
+body
+  background: image_url('background.jpg')
+  background-size: cover
+  background-attachment: fixed
+  font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 15px
+  line-height: 26px
+  color: #333
+
+a
+  color: #ea2244
+  text-decoration: none
+
+code
+  font-size: 85%
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace
+  padding: 0.2em 0.32em
+  background: rgba(0,0,0,.04)
+  border-radius: 3px
+
+pre
+  padding: 0.2em 0.6em
+  background: #f7f7f7
+  code
+    background: none
+    word-break: normal
+    white-space: pre
+
+h1, h2, h3, h4, h5, h6
+  color: #000
+
+h1
+  font-size: 48px
+  font-weight: 400
+  line-height: 62px
+  margin: 0 0 30px
+  + p
+    font-size: 18px
+    line-height: 28px
+    color: #666
+    padding-bottom: 40px
+    margin-bottom: 40px
+    border-bottom: 1px solid rgba(0,0,0,.1)
+
+* + h2
+  margin: 40px 0 0 0
+
+header
+  position: fixed
+  width: calc(100% - 260px)
+  padding: 20px
+  text-align: right
+  .github
+    a
+      color: #000
+    img
+      float: right
+      margin: 2px 0 0 10px
+
+aside
+  position: fixed
+  top: 0
+  left: 0
+  width: 260px
+  height: 100%
+  padding: 40px
+  box-shadow: inset -5px 0 12px rgba(0,0,0,.32)
+  .logo
+    float: right
+
+main
+  position: absolute
+  top: 0
+  left: 260px
+  width: calc(100% - 260px)
+  background: #fff
+
+article
+  padding: 50px 60px
+  max-width: 660px
+  a:hover
+    text-decoration: underline
+
+footer
+  font-size: 13px
+  max-width: 660px
+  color: #999
+  padding: 20px 60px
+  text-align: center
+
+
