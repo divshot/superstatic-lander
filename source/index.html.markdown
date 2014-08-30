@@ -8,7 +8,7 @@ Superstatic is an enhanced static web server that was built to power
 [Divshot](https://www.divshot.com). It has fantastic support for HTML5
 pushState applications as well as clean URLs and other goodies.
 
-## Installation
+## <a id="installation"></a>Installation
 
 Superstatic should be installed globally using npm:
 
@@ -16,7 +16,7 @@ Superstatic should be installed globally using npm:
 $ npm install -g superstatic
 ```
     
-## Usage
+## <a id="usage"></a>Usage
 
 By default, Superstatic will simply serve the current directory on port
 3474. This works just like any other static server:
@@ -39,7 +39,7 @@ $ superstatic public --port 8080 --host 127.0.0.1
     
 Where it gets interesting is with Superstatic's JSON configuration file.
 
-## Configuration
+## <a id="configuration"></a>Configuration
 
 Superstatic reads special configuration from a JSON file (either `superstatic.json`
 or `divshot.json` by default, configurable with `-c`). This JSON file enables
@@ -144,11 +144,11 @@ on each request.
 }
 ```
 
-## Services
+## <a id="services"></a>Services
 
 **Services** are extensions that provide additional functionality. More TBD.
 
-## API
+## <a id="api"></a>API
 
 The Superstatic server is just an extended version of the [Connect](http://www.npmjs.org/package/connect) server. This means you can use any custom middlewares you like that work with Connect.
 
@@ -222,7 +222,7 @@ Stops the server and close all connections
 
 **Note:** Since Superstatic uses Connect, any instance methods availble on a Connect instance are available on the Superstatic instance.
 
-## Run Tests
+## <a id="testing"></a>Run Tests
 
 In superstatic module directory:
 

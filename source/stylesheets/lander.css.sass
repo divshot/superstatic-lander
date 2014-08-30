@@ -1,8 +1,13 @@
+
+$red: #ea2244
+
 *
   box-sizing: border-box
 
 body
-  background: image_url('background.jpg')
+  position: relative
+  background: #282828
+  // background: #282828 image_url('background.jpg')
   background-size: cover
   background-attachment: fixed
   font-family: "ff-din-web", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -10,8 +15,18 @@ body
   line-height: 26px
   color: #333
 
+.bg
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: -100px
+  z-index: 1
+  background: #282828 image_url('background.jpg')
+  background-size: auto 100%
+
 a
-  color: #ea2244
+  color: $red
   text-decoration: none
 
 code
@@ -60,6 +75,10 @@ header
       float: right
       margin: 2px 0 0 10px
 
+aside, main
+  position: relative
+  z-index: 3
+
 aside
   position: fixed
   top: 0
@@ -70,6 +89,22 @@ aside
   box-shadow: inset -5px 0 12px rgba(0,0,0,.32)
   .logo
     float: right
+  nav
+    padding: 20px 0 0 0
+    clear: both
+    li
+      list-style: none
+      a
+        display: block
+        margin: 0 0 6px -19px
+        padding: 0 0 0 15px
+        color: #ccc
+        border-left: 4px solid transparent
+        &:hover
+          color: #fff
+        &.active
+          color: #fff
+          border-left: 4px solid $red
 
 main
   position: absolute
