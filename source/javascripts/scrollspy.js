@@ -76,16 +76,6 @@
   };
 
   /**
-   * Convert data-options attribute into an object of key/value pairs
-   * @private
-   * @param {String} options Link-specific options as a data attribute string
-   * @returns {Object}
-   */
-  var getDataOptions = function ( options ) {
-    return !options || !(typeof JSON === 'object' && typeof JSON.parse === 'function') ? {} : JSON.parse( options );
-  };
-
-  /**
    * Escape special characters for use with querySelector
    * @private
    * @param {String} id The anchor ID to escape
@@ -312,7 +302,10 @@
   var scrollHandler = function (event) {
     var closestLink = findClosest(anchors, root.pageYOffset);
     var prevLink = document.querySelector(settings.items + '.' + settings.activeClass);
-    if (prevLink && prevLink != closestLink.link) prevLink.classList.remove(settings.activeClass);
+    if (prevLink && prevLink != closestLink.link) {
+      prevLink.classList.remove(settings.activeClass);
+      settings.activated();
+    }
     closestLink.link.classList.add(settings.activeClass);
   };
 
@@ -389,6 +382,9 @@
 
     document.addEventListener('click', clickHandler, false);
     root.addEventListener('scroll', scrollHandler, false);
+
+    // Check scroll on init
+    scrollHandler(false);
   };
 
   return exports;

@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   scrollSpy.init({
-    items: 'nav li a',
-    activated: function() {
-      console.log('activated');
-    }
+    items: 'nav li a'
   });
 });
