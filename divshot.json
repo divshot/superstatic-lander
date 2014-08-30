@@ -1,0 +1,5 @@
+{
+  "name": "superstatic-lander",
+  "root": "./build",
+  "clean_urls": true
+}
