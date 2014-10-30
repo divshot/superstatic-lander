@@ -380,7 +380,10 @@
     var links = document.querySelectorAll(settings.items);
     anchors = findAnchors(links);
 
-    document.addEventListener('click', clickHandler, false);
+    forEach(links, function(link) {
+      link.addEventListener('click', clickHandler, false);
+    });
+
     root.addEventListener('scroll', scrollHandler, false);
 
     // Check scroll on init
