@@ -134,7 +134,7 @@ In this example, `/old/custom-segment/path` redirect to `/new/path/custom-segmen
 **error_page:** the path to the page that you want to render 404 errors if an unrecognized
 URL is supplied. For example, `error.html`.
 
-**cache_control:** by default, all pages served by superstatic have cache control headers set at
+**cache_control:** by default, all pages served by Superstatic have cache control headers set at
 1 hour. To change them, you can supply an object containing file globs and ages (in seconds).
 You can also specify `false` to indicate that no caching should be performed, and a string to
 manually set the cache control header. An example:
@@ -220,19 +220,19 @@ Instantiates a Connect server, setting up Superstatic middleware, port, host, de
 * `options` - Optional configuration. Uses the same options as the middleware, plus a few more options:
   * `port` - The port of the server. Defaults to `3474`.
   * `host` or `hostname` - The hostname of the server. Defaults to `localhost`.
-  * `errorPage` - A file path to a custom error page. Defaults to [Superstatic's error page]().
+  * `errorPage` - A file path to a custom error page. Defaults to [Superstatic's error page](/error).
   * `debug` - A boolean value that tells Superstatic to show or hide network logging in the console. Defaults to `false`.
   * `gzip` - A boolean value that tells Superstatic to gzip response body. Defaults to `false`.
 
 ## <a id="testing"></a>Run Tests
 
-In superstatic module directory:
+In Superstatic module directory:
 
 ```
 npm install
 npm test
 ```
 
-## Contributing
+## <a id="contributing"></a>Contributing
 
 We LOVE open source and open source contributors. If you would like to contribute to Superstatic, please review our [contributing guidelines](https://github.com/divshot/superstatic/blob/master/CONTRIBUTING.md) before your jump in and get your hands dirty.
