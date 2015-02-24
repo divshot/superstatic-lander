@@ -94,7 +94,7 @@ apps. An example:
 }
 ```
 
-**redirects:** you can specify to have certain url paths be redirected (specifying a custom http status code, or which defaults to 301) to other url paths by supplying an object to the `redirects` key. Route path matching is similar to using custom routes. For example:
+**redirects:** you can specify to have certain url paths be redirected (specifying a custom HTTP status code, or which defaults to 301) to other url paths by supplying an object to the `redirects` key. Route path matching is similar to using custom routes. For example:
 
 Default 301 redirect
 
@@ -106,7 +106,7 @@ Default 301 redirect
 }
 ```
 
-Custom http status code
+Custom HTTP status code
 
 ```json
 {
@@ -168,12 +168,12 @@ on each request.
 }
 ```
 
-# <a id="api"></a>API
+## <a id="api"></a>API
 
 Superstatic is available as a middleware and a standalone [Connect](http://www.npmjs.org/package/connect) server. This means you can plug this into your current server or run your own static server using Superstatic's server.
 
 
-## <a id="middleware"></a>Middleware
+### <a id="middleware"></a>Middleware
 
 ```js
 var superstatic = require('superstatic')
@@ -195,11 +195,11 @@ Insantiates middleware. See an [example](https://github.com/divshot/superstatic/
 * `options` - Optional configuration:
   * `config` - A file path to your application's configuration file (see [Configuration](#configuration)) or an object containing your application's configuration.
   * `protect` - Adds HTTP basic auth. Example:  `username:password`
-  * `env`- A file path your application's environment variables file or an object containing values that are available at the urls `/__/env.json` and `/__/env.js`. See the documentation detail on [environment variables](http://docs.divshot.com/guides/environment-variables)
+  * `env`- A file path your application's environment variables file or an object containing values that are available at the urls `/__/env.json` and `/__/env.js`. See the documentation detail on [environment variables](http://docs.divshot.com/guides/environment-variables).
   * `cwd` - The current working directory to set as the root. Your application's root configuration option will be used relative to this.
   * `services` - An object containing various Superstatic services.
 
-## <a id="server"></a>Server
+### <a id="server"></a>Server
 
 ```js
 var superstatic = require('superstatic/lib/server');
